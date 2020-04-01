@@ -1,5 +1,5 @@
 {
-  "name": "@lvison/swagger-vue",
+  "name": "@liuguanghui/swagger-vue",
   "version": "1.0.0",
   "description": "Swagger to JS & Vue & Axios Codegen,fork from https://github.com/chenweiqun/swagger-vue",
   "main": "index.js",
