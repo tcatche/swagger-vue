@@ -1,0 +1,33 @@
+/*
+*==========================================================
+* filter
+*==========================================================
+*/
+/* eslint-disable no-use-before-define */
+{{#each enumerations}}
+const format{{&name}} = (val) => {
+    const result={{&name}}.find((element)=>{return element.value===val  }) ||{}
+    return result.label||'';
+}
+{{/each}}
+
+export default {
+install(Vue) {
+{{#each enumerations}}
+Vue.filter('format{{&name}}', format{{&name}},);
+{{/each}}
+},
+};
+/*
+*==========================================================
+* 枚举列表
+*==========================================================
+*/
+
+{{#each enumerations}}
+export const {{&name}}=[
+{{#display}}
+    {label:'{{&value}}', value:'{{&key}}', },
+{{/display}}
+]
+{{/each}}
