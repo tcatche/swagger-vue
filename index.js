@@ -4,7 +4,7 @@
  * @Author: lvison
  * @Date: 2019-07-04 17:25:43
  * @LastEditors: lvison
- * @LastEditTime: 2020-11-11 16:58:04
+ * @LastEditTime: 2020-11-11 17:25:57
  */
 const http = require('http')
 const parse = require('./lib/parse.js')
@@ -36,7 +36,7 @@ let getFilter = function (opt) {
  * http 请求 swagger json文件
  * @param {*} swaggerUrl swagger json 文件地址
  */
-let apiRequest = function (swaggerUrl)) {
+let apiRequest = function (swaggerUrl) {
   ops = url.parse(swaggerUrl)
   return new Promise((resolve, reject) => {
     let req = ''
