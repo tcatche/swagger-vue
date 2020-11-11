@@ -2,7 +2,7 @@
  * @Description: readme
  * @Author: lvison
  * @Date: 2019-08-14 11:31:58
- * @LastEditTime: 2020-04-01 16:33:48
+ * @LastEditTime: 2020-11-11 17:16:00
  * @LastEditors: lvison
  -->
 
@@ -46,6 +46,7 @@ swaggerGen.apiRequest(url).then(jsondata=>{
     className: 'api'
   }
 
+  // const codeResult = swaggerGen.getApi(opt, [‘xxx’,'xxx']) //1.0.2支持传入生成需要的function,xxx-operationID
   const codeResult = swaggerGen.getApi(opt)
   fs.writeFileSync(path.join(__dirname, '../config/api.js'), codeResult)//生成API文档
 
@@ -159,38 +160,26 @@ All requests use **axios** module with promise, for more information about that 
 
 
 # changelog
-# [2.0.3](http://) (2019-08-13)
-###  Bug Fixes
+# [1.0.0](http://) (2019-08-13)
 * swgger2.0生成代码注释错乱优化
-### Feature
 * 优化example
 * 优化模版
----
-# [2.0.2](http://) (2019-08-12)
-###  Bug Fixes
 * 修改filter bug
----
-# [2.0.1](http://) (2019-07-30)
-### Features
 * 暴露Apirequet函数,如果API文件是以接口形式提供的，我们可以调用该函数请求接口，将文档转换为JSON数据
 * 修改日志路径
----
-# [2.0.0](http://) (2019-07-18)
-### Features
 * 新增：抓取swgger枚举变量，生成filter(支持swgger3.0)
 * 删除生成api时生成的无用函数
----
-
-### Breaking Changes
 * 暴露生成api和filter的接口,引用方式更改
 ---
 
-### Bug Fixes
----
 
-
-# [1.0.0](http://) (2019-03-19)
+# [1.0.1](http://) (2019-03-19)
 ### Features
 * 取消parameters参数camelCase转换 by lvison
 * 兼容openApi by lvison
+---
+
+# [1.0.2](http://) (2020-11-11)
+### Features
+* getApi支持传入过滤function列表，只生成所需要的funciton代码, function值为swagger描述中，每个接口的operationID
 ---

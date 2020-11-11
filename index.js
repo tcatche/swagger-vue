@@ -4,27 +4,40 @@
  * @Author: lvison
  * @Date: 2019-07-04 17:25:43
  * @LastEditors: lvison
- * @LastEditTime: 2019-08-14 10:37:46
+ * @LastEditTime: 2020-11-11 16:58:04
  */
 const http = require('http')
 const parse = require('./lib/parse.js')
 const codegen = require('./lib/codegen.js')
 const url = require('url')
 
-let getApi = function (opt) {
-  let data = parse.parseApi(opt)
+/**
+ * 根据swagger json描述生成axios请求方法
+ * @param {*} opt swagger json数据对象
+ * @param {*} usedFunctionList 确认使用的function
+ */
+let getApi = function (opt, usedFunctionList = []) {
+  let data = parse.parseApi(opt, usedFunctionList)
   let codeResult = codegen.codeApi(data)
   return codeResult
 }
 
+/**
+ * 根据swagger json描述 生成vue的过滤方法及需要转义的枚举数据
+ * @param {*} opt swagger json数据对象
+ */
 let getFilter = function (opt) {
   let data = parse.parseFilter(opt)
   let codeResult = codegen.codeFilter(data)
   return codeResult
 }
 
-let apiRequest = function (ops) {
-  ops = url.parse(ops)
+/**
+ * http 请求 swagger json文件
+ * @param {*} swaggerUrl swagger json 文件地址
+ */
+let apiRequest = function (swaggerUrl)) {
+  ops = url.parse(swaggerUrl)
   return new Promise((resolve, reject) => {
     let req = ''
     const httpClient = http.request(
