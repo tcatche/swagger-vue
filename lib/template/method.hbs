@@ -9,7 +9,7 @@ export const {{&methodName}} = function(parameters = {}) {
     const domain = parameters.$domain ? parameters.$domain : getDomain()
     const config = parameters.$config
     let path = '{{&path}}'
-    let body
+    let body = {}
     let queryParameters = {}
     let form = {}
 
@@ -26,7 +26,7 @@ export const {{&methodName}} = function(parameters = {}) {
 
     {{#isBodyParameter}}
         if(parameters['{{&camelCaseName}}'] !== undefined) {
-            body = parameters['{{&camelCaseName}}']
+            bodybody['{{&camelCaseName}}'] = parameters['{{&camelCaseName}}']
         }
     {{/isBodyParameter}}
 

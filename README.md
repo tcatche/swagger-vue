@@ -2,7 +2,7 @@
  * @Description: readme
  * @Author: lvison
  * @Date: 2019-08-14 11:31:58
- * @LastEditTime: 2020-11-11 17:46:40
+ * @LastEditTime: 2020-11-24 15:23:01
  * @LastEditors: lvison
  -->
 
@@ -182,5 +182,11 @@ All requests use **axios** module with promise, for more information about that 
 # [1.0.4](http://) (2020-11-11)
 ### Features
 * getApi支持传入过滤function列表，只生成所需要的funciton代码, function值为swagger描述中，每个接口的operationID
+* 新增部分代码注释
+---
+
+# [1.1.0](http://) (2020-11-24)
+### Features
+* 新增对openAPI版本requestBody中的入参做详细解析，并在模版方法中新增对应的参数校验
 * 新增部分代码注释
 ---
