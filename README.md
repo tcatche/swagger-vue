@@ -2,7 +2,7 @@
  * @Description: readme
  * @Author: lvison
  * @Date: 2019-08-14 11:31:58
- * @LastEditTime: 2020-11-24 15:23:01
+ * @LastEditTime: 2020-11-24 16:25:09
  * @LastEditors: lvison
  -->
 
@@ -185,8 +185,8 @@ All requests use **axios** module with promise, for more information about that 
 * 新增部分代码注释
 ---
 
-# [1.1.0](http://) (2020-11-24)
+# [2.0.0](http://) (2020-11-24)
 ### Features
-* 新增对openAPI版本requestBody中的入参做详细解析，并在模版方法中新增对应的参数校验
+* 新增对openAPI版本requestBody中的入参做详细解析，并在模版方法中新增对应的参数校验（request body默认为object） - 暂时不支持swagger2.0
 * 新增部分代码注释
 ---
