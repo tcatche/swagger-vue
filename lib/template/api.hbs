@@ -27,15 +27,12 @@ export const request = (method, url, body, queryParameters, form, config)=>{
       showNetworkError: true,
     }
   }
-  // let queryUrl = url+(keys.length > 0 ? '?' + (keys.map(key => key + '=' + encodeURIComponent(queryParameters[key])).join('&')) : '')
-  if (method === 'delete' && body) {
-    return axiosInstance[method](queryUrl,{data:body},config)
-  } else if(body){
-      return axiosInstance[method](queryUrl,body,config)
-  } else if (method === 'get' || method === 'delete' || method === 'head' || method === 'option') {
-      return axiosInstance[method](queryUrl,config)
+  if (method === 'post' || method === 'put' || method === 'patch') {
+    return axiosInstance[method](queryUrl, { data: body }, config)
+  }  else if (method === 'get' || method === 'delete' || method === 'head' || method === 'option') {
+    return axiosInstance[method](queryUrl, config)
   } else {
-      return axiosInstance[method](queryUrl,qs.stringify(form),config)
+    return axiosInstance[method](queryUrl, qs.stringify(form), config)
   }
 }
 {{> methods }}
