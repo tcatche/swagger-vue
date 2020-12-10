@@ -2,7 +2,7 @@
  * @Description: readme
  * @Author: lvison
  * @Date: 2019-08-14 11:31:58
- * @LastEditTime: 2020-12-03 15:55:55
+ * @LastEditTime: 2020-12-10 11:15:48
  * @LastEditors: lvison
  -->
 
@@ -190,8 +190,8 @@ All requests use **axios** module with promise, for more information about that 
 * 新增对openAPI版本requestBody中的入参做详细解析，并在模版方法中新增对应的参数校验（request body默认为object） - 暂时不支持swagger2.0
 * 新增部分代码注释
 ---
-# [2.0.2](http://) (2020-12-3)
+# [2.0.3](http://) (2020-12-10)
 ### Features
-* 修复复delete 方法无法接收自定义参数
+* 修复复delete 方法无法接收自定义参数，修复post 、put、patch等方式传参错误bug
 * 新增部分代码注释
 ---

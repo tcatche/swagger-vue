@@ -28,7 +28,7 @@ export const request = (method, url, body, queryParameters, form, config)=>{
     }
   }
   if (method === 'post' || method === 'put' || method === 'patch') {
-    return axiosInstance[method](queryUrl, { data: body }, config)
+    return axiosInstance[method](queryUrl, body, config)
   }  else if (method === 'get' || method === 'delete' || method === 'head' || method === 'option') {
     return axiosInstance[method](queryUrl, config)
   } else {
