@@ -1,7 +1,7 @@
 {
-  "name": "@liuguanghui/swagger-vue",
-  "version": "1.0.4",
-  "description": "Swagger to JS & Vue & Axios Codegen,fork from https://github.com/chenweiqun/swagger-vue",
+  "name": "@tcatche/swagger-vue",
+  "version": "1.0.2",
+  "description": "Swagger to JS & Vue & Axios Codegen,fork from https://github.com/Lvison/swagger-vue",
   "main": "index.js",
   "scripts": {
     "gen:api": "node example/create_api/index.js",
@@ -19,12 +19,12 @@
     "vue",
     "codegen"
   ],
-  "author": "liuguanghui",
+  "author": "tcatche",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Lvison/swagger-vue/issues"
+    "url": "https://github.com/tcatche/swagger-vue/issues"
   },
-  "homepage": "https://github.com/Lvison/swagger-vue",
+  "homepage": "https://github.com/tcatche/swagger-vue",
   "dependencies": {
     "handlebars": "^4.0.6",
     "js-beautify": "^1.6.12",

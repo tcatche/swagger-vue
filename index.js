@@ -16,8 +16,8 @@ const url = require('url')
  * @param {*} opt swagger json数据对象
  * @param {*} usedFunctionList 确认使用的function
  */
-let getApi = function (opt, usedFunctionList = []) {
-  let data = parse.parseApi(opt, usedFunctionList)
+let getApi = function (opt) {
+  let data = parse.parseApi(opt)
   let codeResult = codegen.codeApi(data)
   return codeResult
 }
@@ -37,7 +37,7 @@ let getFilter = function (opt) {
  * @param {*} swaggerUrl swagger json 文件地址
  */
 let apiRequest = function (swaggerUrl) {
-  ops = url.parse(swaggerUrl)
+  const ops = url.parse(swaggerUrl)
   return new Promise((resolve, reject) => {
     let req = ''
     const httpClient = http.request(

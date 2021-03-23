@@ -1,11 +1,3 @@
-<!--
- * @Description: readme
- * @Author: lvison
- * @Date: 2019-08-14 11:31:58
- * @LastEditTime: 2020-11-11 17:46:40
- * @LastEditors: lvison
- -->
-
 # swagger-vue
 Swagger to JS &amp; Vue &amp; Axios Codegen
 
@@ -46,7 +38,6 @@ swaggerGen.apiRequest(url).then(jsondata=>{
     className: 'api'
   }
 
-  // const codeResult = swaggerGen.getApi(opt, [‘xxx’,'xxx']) //1.0.2支持传入生成需要的function,xxx-operationID
   const codeResult = swaggerGen.getApi(opt)
   fs.writeFileSync(path.join(__dirname, '../config/api.js'), codeResult)//生成API文档
 
@@ -177,10 +168,4 @@ All requests use **axios** module with promise, for more information about that 
 ### Features
 * 取消parameters参数camelCase转换 by lvison
 * 兼容openApi by lvison
----
-
-# [1.0.4](http://) (2020-11-11)
-### Features
-* getApi支持传入过滤function列表，只生成所需要的funciton代码, function值为swagger描述中，每个接口的operationID
-* 新增部分代码注释
 ---
