@@ -3,18 +3,22 @@ import axios from 'axios'
 import qs from 'qs'
 let domain = '{{&domain}}'
 let axiosInstance = axios.create()
+const isDev = process.env.NODE_ENV === 'development'
+
 export const getDomain = () => {
   return domain
 }
 export const setDomain = ($domain) => {
   domain = $domain
 }
+
 export const getAxiosInstance = () => {
   return axiosInstance
 }
 export const setAxiosInstance = ($axiosInstance) => {
   axiosInstance = $axiosInstance
 }
+
 export const request = (method, url, body, queryParameters, form, config)=>{
   method = method.toLowerCase()
   let keys = Object.keys(queryParameters)
