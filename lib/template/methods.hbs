@@ -1,7 +1,11 @@
 /*==========================================================
  *                    {{&description}}
  ==========================================================*/
+interface Parameters {
+  $domain?: string;
+  $config?: any;
+}
 
 {{#methods}}
-    {{> method }}
+  {{> method }}
 {{/methods}}

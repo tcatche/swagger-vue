@@ -1,3 +1,4 @@
+
 /**
 * {{&summary}}
 * request: {{&methodName}}
@@ -5,7 +6,7 @@
 {{^isSingleton}} * @param {{&camelCaseName}} - {{&description}}{{/isSingleton}}
 {{/parameters}}
 */
-export const {{&methodName}} = function(parameters = {}) {
+export const {{&methodName}} = function(parameters: Parameters = {}) {
     const host = parameters.$domain ? parameters.$domain : getDomain()
     const config = parameters.$config
     let path = '{{&path}}'
